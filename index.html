@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
     <title>Frontend Mentor | Four card feature section</title>
     <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
 
       body {
-        background-color: #F2F2F2;
-        font-family: 'Poppins', sans-serif;
+        background-color: #f2f2f2;
+        font-family: "Poppins", sans-serif;
         font-size: 0.9375rem;
       }
 
       header {
         text-align: center;
         line-height: 2;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-rows: repeat(9, 100px);
+        grid-gap: 20px;
+      }
+
+      .block-cell {
+        box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        border-radius: 7px;
       }
 
       .first-heading {
@@ -36,13 +62,24 @@
         color: hsl(229, 6%, 66%);
       }
 
-      .block-cell {
-        box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.15);
-        background-color: #FFFFFF;
-        border-radius: 7px;
-        width: 21.875rem;
-        height: 15.625rem;
-        margin: auto;
+      .item1 {
+        grid-column: 8 / span 3;
+        grid-row: 2 / span 2;
+      }
+
+      .item2 {
+        grid-column: 5 / span 3;
+        grid-row: 3 / span 2;
+      }
+
+      .item3 {
+        grid-column: 8 / span 3;
+        grid-row: 4 / span 2;
+      }
+
+      .item4 {
+        grid-column: 11 / span 3;
+        grid-row: 3 / span 2;
       }
 
       .block-header {
@@ -63,30 +100,6 @@
         display: flex;
         justify-content: flex-end;
       }
-
-      .img-icon {
-        position: relative;
-        top : 2rem;
-      }
-
-      .left {
-        float: left;
-        right: -25rem;
-      }
-
-      .right {
-        float: right;
-        left: -25rem;
-      }
-
-      .aligned {
-        position: relative;
-        top: -6rem;
-      }
-
-      .bottom {
-        margin-top: 2rem;
-      }
     </style>
   </head>
 
@@ -95,61 +108,35 @@
       <h1 class="first-heading">Reliable, efficient delivery</h1>
       <h1 class="second-heading">Powered by Technology</h1>
       <p class="head-paragraph">
-        Our Artificial Intelligence powered tools use millions of project data points 
-        to ensure that your project is successful
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
       </p>
     </header>
-    
-    <main>
-      <div class="block-cell top">
-        <div class="wrapper">
-          <h3 class="block-header">Team Builder</h3>
-          <p class="block-paragraph">Regularly evaluates our talent to ensure quality</p>
 
-          <div class="img">
-            <img src="./images/icon-team-builder.svg" alt="" class="img-icon">
-          </div>
-        </div>
+    <div class="grid-container">
+      <div class="block-cell item1">
+        <h1>1</h1>
       </div>
 
-      <div class="block-cell left aligned">
-        <div class="wrapper">
-          <h3 class="block-header">Supervisor</h3>
-          <p class="block-paragraph">Monitors activity to identify project roadblocks</p>
-
-          <div class="img">
-            <img src="./images/icon-supervisor.svg" alt="" class="img-icon">
-          </div>
-        </div>
+      <div class="block-cell item2">
+        <h1>2</h1>
       </div>
 
-      <div class="block-cell right aligned">
-        <div class="wrapper">
-          <h3 class="block-header">Calculator</h3>
-          <p class="block-paragraph">Uses data from past projects to provide better delivery estimates</p>
-
-          <div class="img">
-            <img src="./images/icon-calculator.svg" alt="" class="img-icon">
-          </div>
-        </div>
+      <div class="block-cell item3">
+        <h1>3</h1>
       </div>
 
-      <div class="block-cell bottom">
-        <div class="wrapper">
-          <h3 class="block-header">Karma</h3>
-          <p class="block-paragraph">Scans our talent network to create the optimal team for your project</p>
-
-          <div class="img">
-            <img src="./images/icon-karma.svg" alt="" class="img-icon">
-          </div>
-        </div>
+      <div class="block-cell item4">
+        <h1>4</h1>
       </div>
-    </main>
-    
+    </div>
+
     <footer>
       <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
   </body>
