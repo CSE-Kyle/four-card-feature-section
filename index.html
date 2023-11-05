@@ -68,6 +68,25 @@
         position: relative;
         top : 2rem;
       }
+
+      .left {
+        float: left;
+        right: -25rem;
+      }
+
+      .right {
+        float: right;
+        left: -25rem;
+      }
+
+      .aligned {
+        position: relative;
+        top: -6rem;
+      }
+
+      .bottom {
+        margin-top: 2rem;
+      }
     </style>
   </head>
 
@@ -82,7 +101,18 @@
     </header>
     
     <main>
-      <div class="block-cell">
+      <div class="block-cell top">
+        <div class="wrapper">
+          <h3 class="block-header">Team Builder</h3>
+          <p class="block-paragraph">Regularly evaluates our talent to ensure quality</p>
+
+          <div class="img">
+            <img src="./images/icon-team-builder.svg" alt="" class="img-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="block-cell left aligned">
         <div class="wrapper">
           <h3 class="block-header">Supervisor</h3>
           <p class="block-paragraph">Monitors activity to identify project roadblocks</p>
@@ -92,23 +122,29 @@
           </div>
         </div>
       </div>
+
+      <div class="block-cell right aligned">
+        <div class="wrapper">
+          <h3 class="block-header">Calculator</h3>
+          <p class="block-paragraph">Uses data from past projects to provide better delivery estimates</p>
+
+          <div class="img">
+            <img src="./images/icon-calculator.svg" alt="" class="img-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="block-cell bottom">
+        <div class="wrapper">
+          <h3 class="block-header">Karma</h3>
+          <p class="block-paragraph">Scans our talent network to create the optimal team for your project</p>
+
+          <div class="img">
+            <img src="./images/icon-karma.svg" alt="" class="img-icon">
+          </div>
+        </div>
+      </div>
     </main>
-<!-- 
-    Our Artificial Intelligence powered tools use millions of project data points 
-    to ensure that your project is successful
-
-    Supervisor
-    Monitors activity to identify project roadblocks
-
-    Team Builder
-    Scans our talent network to create the optimal team for your project
-
-    Karma
-    Regularly evaluates our talent to ensure quality
-
-    Calculator
-    Uses data from past projects to provide better delivery estimates -->
-
     
     <footer>
       <p class="attribution">
