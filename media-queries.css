@@ -1,0 +1,20 @@
+@media only screen and (max-width: 425px) {
+    .first-heading {
+        font-size: 1.5rem;
+    }
+
+    .second-heading {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block-cell {
+        margin: auto;
+        width: 19.4375rem;
+        height: 13.875rem;
+    }
+}
